@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "fixborderlessbug",
+  "version": "${version}",
+
+  "name": "Fix Borderless Window Bug",
+  "description": "fixes a borderless window bug where your mouse position in game is off centered",
+  "authors": [
+    "raiden"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.raiden.fixborderlessbug.FixBorderlessBug"
+    ],
+    "client": [
+      "net.raiden.fixborderlessbug.FixBorderlessBugClient"
+    ]
+  },
+  "mixins": [
+    "fixborderlessbug.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
